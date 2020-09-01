@@ -48,7 +48,7 @@ public class Translator {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        fortuneList.forEach(System.out::println);
         return fortuneList;
     }
 

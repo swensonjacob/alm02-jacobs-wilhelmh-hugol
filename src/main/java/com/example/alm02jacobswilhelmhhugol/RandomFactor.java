@@ -14,7 +14,7 @@ public class RandomFactor {
         return nationionality.length() - 3;
     }
 
-    public  int getIntFromAge(int age){
+    public int getIntFromAge(int age){
         return age + 9;
     }
 
