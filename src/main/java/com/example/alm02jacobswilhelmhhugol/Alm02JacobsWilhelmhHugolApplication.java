@@ -9,5 +9,4 @@ public class Alm02JacobsWilhelmhHugolApplication {
     public static void main(String[] args) {
         SpringApplication.run(Alm02JacobsWilhelmhHugolApplication.class, args);
     }
-
 }
