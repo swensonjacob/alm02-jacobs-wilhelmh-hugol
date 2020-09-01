@@ -14,13 +14,13 @@ import java.util.Scanner;
 public class Translator {
 
     RandomFactor randomFactor = new RandomFactor();
-    List<String> fortuneList = new ArrayList<>();
 
 
-    public  int getTheNumber() {
-        int intFromName = randomFactor.getIntFromName("Carl af Linné");
-        int intFromNationality = randomFactor.getIntFromNationality("Schweden");
-        int intFromAge = randomFactor.getIntFromAge(103);
+
+    public int getTheNumber(String name, String nationality, int age) {
+        int intFromName = randomFactor.getIntFromName(name);
+        int intFromNationality = randomFactor.getIntFromNationality(nationality);
+        int intFromAge = randomFactor.getIntFromAge(age);
         int randomNr = (intFromAge + intFromNationality + intFromName ) / 4;
 
         if (randomNr > 100){
@@ -52,14 +52,7 @@ public class Translator {
         return fortuneList;
     }
 
-    public void getFortuneFromList(int row) throws FileNotFoundException {
-        System.out.println(getFortuneList().get(row));
-    }
-
-    public static void main(String[] args) throws FileNotFoundException {
-        Translator getTheNr = new Translator();
-        getTheNr.getTheNumber();
-        getTheNr.getFortuneList();
-        getTheNr.getFortuneFromList(getTheNr.getTheNumber());
+    public String getFortuneFromList(String name,String nationality,int age) throws FileNotFoundException  {
+        return getFortuneList().get(getTheNumber(name,nationality,age));
     }
 }
