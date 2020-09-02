@@ -6,6 +6,7 @@ pipeline {
            steps {
             echo 'Building'
             sh 'mvn clean compile'
+            sh 'ls'
            }
         }
         stage('Test'){
