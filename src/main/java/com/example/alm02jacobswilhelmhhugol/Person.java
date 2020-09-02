@@ -7,6 +7,7 @@ package com.example.alm02jacobswilhelmhhugol;//Class Person – Will be used to 
 // mail
 
 
+
 public class Person {
 
     private String fullName;
@@ -42,13 +43,5 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "fullName='" + fullName + '\'' +
-                ", nationality='" + nationality + '\'' +
-                ", age=" + age +
-                '}';
-    }
+                            
 }
