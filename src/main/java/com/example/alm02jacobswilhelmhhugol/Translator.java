@@ -1,8 +1,4 @@
 package com.example.alm02jacobswilhelmhhugol;
-//Class Translator – The rules for the message that will be displayed. It will contain
-//methods that will take a RandomFactor object and the inputs that were filled in the
-//form and, then, based on certain rules that you will define, e.g. if first name starts with
-//a-h or l-z, if the person is under 20 yo, etc, will return a String with a fortune message.
 
 
 import org.springframework.util.ResourceUtils;
@@ -34,12 +30,13 @@ public class Translator {
     }
 
 
-    public List<String> getFortuneList() throws FileNotFoundException {
+    public List<String> getFortuneList() {
 
         File file;
-        file  = ResourceUtils.getFile("classpath:fortunes.txt");
+
         List<String> fortuneList = new ArrayList<>();
         try {
+            file  = ResourceUtils.getFile("classpath:fortunes.txt");
             Scanner sc = new Scanner(file);
             String line = "";
             while (sc.hasNextLine()){
@@ -54,7 +51,7 @@ public class Translator {
         return fortuneList;
     }
 
-    public String getFortuneFromList(String name,String nationality,int age) throws FileNotFoundException  {
+    public String getFortuneFromList(String name,String nationality,int age)  {
         return getFortuneList().get(getTheNumber(name,nationality,age));
     }
 }
