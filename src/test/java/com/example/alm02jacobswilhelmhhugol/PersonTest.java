@@ -9,12 +9,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 public class PersonTest  {
     Person person = new Person("Hugo Lindmark","Sweden",29);
-    @Test
+/*    @Test
     void getFullName() {
         assertTrue(person.getFullName().equals("Hugo Lindmark"));
 
     }
 
+
+ */
     @Test
     void setFullName() {
         person.setFullName("Pelle Svanslös");
