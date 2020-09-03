@@ -8,4 +8,8 @@ public class Fortune {
         this.message = message;
     }
 
+
+    public String getMessage() {
+        return message;
+    }
 }
