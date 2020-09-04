@@ -4,19 +4,23 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <meta charset="UTF-8">
     <title>index</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c4826e9f54.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div>
-    <center>
-        <h1>Fortune teller</h1>
-        <p>Full name</p><input id=full-name type="text">
-        <p>Nationality</p><input id=nationality type="text">
-        <p>Age</p><input id=age type="number">
-        <br>
-        <button id="fortune-btn">Get Fortune</button>
-        <br>
+<div class="wrapper">
+
+        <img src="images/fortune-logo.png" alt="logo"/>
+        <label class="input-label">Full name</label>
+        <input type="text">
+        <label class="input-label">Nationality</label>
+        <input id=nationality type="text">
+        <label class="input-label">Age</label>
+        <input id=age type="number">
+        <button class="submit-btn" id="fortune-btn"><p class="btn-text">Get Fortune</p></i></button>
         <textarea id="text-area"></textarea>
-    </center>
+        <div/>
 </div>
 <script src="main.js"></script>
 </body>
