@@ -16,7 +16,6 @@ public class Controller {
     @GetMapping()
     public Fortune getFortune(@RequestParam String name,@RequestParam String nationality,@RequestParam int age) {
     Translator getTheNr = new Translator();
-
         return new Fortune(getTheNr.getFortuneFromList(name,nationality,age));
     }
 
