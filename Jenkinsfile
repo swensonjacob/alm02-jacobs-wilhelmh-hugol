@@ -15,6 +15,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh 'mvn test'
+                sh 'mvn surefire-report:report-only'
             }
 
         }
@@ -27,13 +28,12 @@ pipeline {
 
             post {
                 always {
-                    junit 'target/surefire-reports/*.xml'
                         publishHTML([
                             allowMissing: false,
                             alwaysLinkToLastBuild: false,
                             keepAll: false,
-                            reportDir: 'target/surefire-reports/',
-                            reportFiles: 'index.html',
+                            reportDir: 'target/site/',
+                            reportFiles: 'surefire-report.html',
                             reportName: 'Unit Tests',
                             reportTitles: 'Unit Tests'
                         ])
